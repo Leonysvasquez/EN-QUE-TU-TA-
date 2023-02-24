@@ -1,0 +1,227 @@
+.business-section {
+    padding: 30px 60px;
+}
+.section-dashboard {
+    padding: 80px 60px;
+}
+.business-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 30px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    transition: .15s all ease;
+}
+.business-card {
+    border-radius: 5px;
+    letter-spacing: .3px;
+    overflow: hidden;
+}
+.business-card h6{
+    font-weight: 500;
+    color: var(--dark);
+}
+.business-card input{
+    width: calc(100% - 15px);
+    background: transparent;
+    border: none;
+}
+
+/* business PRIMARY CARD */
+.business-cards .primary-card {
+    display: flex;
+    justify-content: center;
+    transition: .15s all ease;
+}
+.primary-card .business-card {
+    height: 200px;
+    width: 350px;
+    box-shadow: 0px 2px 8px var(--primary);
+}
+.primary-card .business-card a,
+.primary-card .business-card button.createBusiness{
+    padding: 0px 15px 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.primary-card .business-card button.createBusiness{
+    background: var(--primary);
+    border: none;
+    cursor: pointer;
+}
+.primary-card .business-card a span,
+.primary-card .business-card .createBusiness span{
+    font-size: 5em;
+    font-weight: 500;
+    color: var(--white);
+}
+.primary-card .business-card a p,
+.primary-card .business-card .createBusiness p{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.primary-card .business-card a div:first-child {
+    height: 100%;
+    width: 100%;
+}
+.primary-card .business-card a div:first-child img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.primary-card .business-card a div:last-child {
+    width: 100%;
+    max-width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, var(--primary) 30%, transparent);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    padding: 10px;
+}
+.primary-card .business-card a div:last-child label {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--secondary);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+section.modal-add-business {
+    z-index: 1000;
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out .3s;
+}
+section.modal-add-business.active {
+    display: flex;
+    transition: all ease-in-out .3s;
+}
+
+section.modal-add-business .modal-container {
+    background: var(--secondary);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    transition: all ease-in-out .3s;
+}
+section.modal-add-business .modal-container .modal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    text-align: center;
+}
+.modal-container .modal h3 {
+    font-size: 1.5em;
+    width: 100%;
+}
+.modal-container .modal form {
+    width: 60%;
+}
+.modal-container .modal form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 15px 15px 30px;
+    width: 100%;
+    position: relative;
+}
+.modal-container .modal form div label {
+    font-size: 1.1em;
+    letter-spacing: .5px;
+    font-weight: 600;
+    color: var(--dark);
+    padding: 0 0 5px 0;
+}
+.modal-container .modal form div label.required::after {
+    content: '*';
+    color: rgb(204, 0, 0);
+    font-weight: 400;
+}
+
+.modal-container .modal form div input,
+.modal-container .modal form div select {
+    width: 100%;
+    height: 35px;
+    border: 1px solid var(--primary);
+    border-radius: 3px;
+    outline: none;
+    padding: 0 10px 0 35px; 
+    color: var(--dark);
+}
+.modal-container .modal form div input[type="submit"]{
+    height: 60px;
+    background: var(--primary);
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 1.5em;
+    letter-spacing: .5px;
+    padding: 0;
+}
+.modal-container .modal form div span {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    font-size: 1.6em;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.modal-add-business.active .modal-close {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--lightgray);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.modal-add-business.active .modal-close span {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5em;
+}

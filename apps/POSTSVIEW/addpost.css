@@ -1,0 +1,301 @@
+body {
+    letter-spacing: 1px;
+}
+main {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    padding: 15px 30px 0;
+}
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--primary);
+}
+
+main form {
+    border: 1px solid  var(--secondary);;
+    background: #fff;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 20px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 0 5px  var(--primary);
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+form div:first-child {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+form div:first-child section select {
+    width: 250px;
+    height: 35px;
+    font-size: .8em;
+    height: 40px;
+    padding: 5px;
+}
+form div section {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+form div .profile-image {
+    margin: auto;
+}
+form div .profile-image .image{
+    height: 300px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px  var(--primary);
+    object-fit: cover;
+    overflow: hidden;
+    background:  var(--secondary);
+}
+form div .profile-image .image img {
+    width: 100%;
+    height: auto;
+}
+textarea {
+    max-width: 557px;
+    width: 100%;
+    min-height: 150px;
+    padding: 10px 10px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    border: 1px solid var(--dark);
+    resize: none;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    background:  var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    background: var(--primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--white);
+}
+#title, #subtitle,
+.destination-date div select {
+    max-width: 557px;
+    width: 100%;
+    min-height: 50px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-weight: 600;
+}
+input,
+select {
+    text-transform: uppercase;
+    padding: 0 10px;
+    border: 1px solid var(--dark);
+    border-radius: 3px;
+}
+form div label {
+    position: relative;
+    left: 0;
+}
+
+a[href="post-crud.php"] {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    background: var(--primary);
+    padding: 5px 15px;
+}
+a[href="post-crud.php"]::before {
+    content: "";
+    position: absolute;
+    left: -14px;
+    width: 26px;
+    height: 26px;
+    background: var(--primary);
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+#reload {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1.1em;
+    font-weight: 500;
+    background: var(--white);
+    padding: 5px 15px;
+    white-space: nowrap;
+}
+#reload::before {
+    content: "";
+    position: absolute;
+    left: -14px;
+    width: 26px;
+    height: 26px;
+    background: var(--white);
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+
+form div #view-posts {
+    position: relative;
+    background: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    padding: 5px 10px 5px 20px;
+    z-index: 1;
+}
+form div #view-posts::after {
+    content: " ";
+    position: absolute;
+    right: -14px;
+    width: 26px;
+    height: 26px;
+    background: var(--primary);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+@media screen and (max-width:680px) {
+    form div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    form div div div{
+        height: 250px;
+        width: 250px;
+        object-fit: cover;
+    }
+    input,
+    textarea,
+    div select {
+        width: 100%;
+    }
+    form div div div img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:370px) {
+    form div div div{
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+    }
+    form div div div img {
+        width: 100%;
+        height: auto;
+    }
+    div select {
+        width: 150px;
+    }
+}
+main form .destination {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+main form .destination div {
+    width: 100%;
+    height: 100%;
+}
+
+main form div .destination-network {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    row-gap: 0px;
+    width: 100%;
+    height: auto;
+    top: 25px;
+}
+main form div .destination-network h4 {
+    font-size: 1.05em;
+    position: absolute;
+    top: -30px;
+    text-align: center;
+    font-weight: 400;
+    width: 100%;
+}
+main form div .destination-network div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all ease .3s;
+}
+main form div .destination-network div label {
+    font-size: 1.8em;
+    color: var(--secondary);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease .15s;
+}
+/* .destination-network div label ion-icon {
+    /* width: 100%;
+    height: 100%; 
+} */
+
+.destination-network div input {
+    display: none;
+}
+.destination-network div input:checked + label {
+    border: 2px solid var(--primary);
+    border-radius: 100%;
+    transition: all ease .15s;
+    color: var(--netColor);
+}
+
+main form div .destination-date {
+    display: flex;
+    flex-direction: column;
+}
+main form div .destination-date div {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    width: 100%;
+}
+main form div .destination-date div select {
+    font-weight: 400;
+    width: 100%;
+}

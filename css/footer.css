@@ -1,0 +1,26 @@
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.footer-container footer {
+    position: fixed;
+    background: var(--primary);
+    color: var(--white);
+    font-size: .7em;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    bottom: 0;
+}
+
+footer span {
+    width: auto;
+    white-space: nowrap;
+}

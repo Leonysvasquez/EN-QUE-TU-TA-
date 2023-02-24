@@ -1,0 +1,85 @@
+.content {
+    position: relative;
+    top: 150px;
+}
+#capture
+{
+    background: #ffffff;
+    border: 5px solid var(--primary);
+    border-radius: 15px;
+    width: 300px; 
+    height: 300px;
+    position: relative;
+    top: -3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#text,
+#btnGetQR
+{
+    display: none;
+}
+
+.btns {
+    height: 60px;
+    display: flex;
+}
+
+button,
+.button
+{
+    height: 60px;
+    width: 140px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    box-shadow: 0 0 8px var(--primary);
+    font-size: 1.2em;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.button:last-child
+{
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    background: var(--white);
+    color: var(--primary);
+}
+
+.text
+{
+    position: relative;
+    top: -5em;
+    text-align: center;
+    letter-spacing: .5px;
+}
+.text h2
+{
+    color: var(--primary);
+    font-size: 2.3em;
+    margin-bottom: 10px;
+}
+.text span
+{
+    font-size: 1.3em;
+    color: var(--gray);
+    line-height: 1.3em;
+}
+
+.codeContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -1,0 +1,48 @@
+.settings-container .data-fields {
+    display: flex;
+}
+.settings-container .data-fields .field {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: relative;
+    width: auto;
+    padding-right: 5px;
+}
+
+.data-fields .field input + label {
+    padding-left: 10px;
+}
+
+.field .info-icon {
+    position: absolute;
+    left: 100%;
+    font-size: 1em;
+    color: var(--gray);
+    cursor: pointer;
+}
+.field .info {
+    position: absolute;
+    font-size: .7em;
+    left: 0;
+    top: 25px;
+    padding: 5px 10px;
+    width: 100%;
+    height: auto;
+    background: var(--secondary);
+    border: 1px solid #a0a0a085;
+    color: #424949c2;
+    border-radius: 3px;
+    line-height: 1.2em;
+    word-spacing: 5px;
+    display: none;
+    cursor: pointer;
+    transition: .5s all ease-in-out;
+}
+
+.field .info-icon:hover + .info,
+.field .info-icon + .info:hover {
+    display: block;
+    transition: .5s all ease-in-out;
+}

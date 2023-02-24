@@ -1,0 +1,437 @@
+.profile-image-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.profile-image-container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.profile-image-container div .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--primary);
+    margin-bottom: 20px;
+}
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.selected-image .image-update-options {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.selected-image .change-image-btn div,
+.selected-image .image-update-options .accept-btn,
+.selected-image .image-update-options .cancel-btn {
+    background: var(--secondary);
+    position: relative;
+    height: 40px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: .5px;
+    white-space: nowrap;
+    transition: .15s all ease-in-out;
+}
+.selected-image .change-image-btn div:hover,
+.selected-image .image-update-options .accept-btn:hover,
+.selected-image .image-update-options .cancel-btn:hover {
+    margin-top: -7px;
+    margin-bottom: 7px;
+    box-shadow: 0px 3px 5px var(--lightgray);
+    transition: .15s all ease-in-out;
+}
+
+
+.image-update-options #imageButtonOptions2:hover::after,
+.image-update-options #imageButtonOptions2:hover::before,
+.image-update-options #imageButtonOptions1:hover::after {
+    margin-top: -7px;
+    margin-bottom: 7px;
+    transition: .155s all ease-in-out;
+}
+
+.image-update-options{
+    display: flex;
+}
+
+.selected-image .image-update-options .accept-btn,
+.selected-image .image-update-options .cancel-btn {
+    position: relative;
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0 15px;
+    width: 20px;
+}
+.selected-image .image-update-options #imageButtonOptions1::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    top: 6px;
+    left: 34px;
+    border-bottom: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+    transform: rotate(45deg);
+    transition: .15s all ease-in-out;
+    pointer-events: none;
+}
+.selected-image .image-update-options #imageButtonOptions2::after,
+.selected-image .image-update-options #imageButtonOptions2::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    top: 10px;
+    right: 38px;
+    background: var(--white);
+    transition: .15s all ease-in-out;
+    pointer-events: none;
+}
+.selected-image .image-update-options #imageButtonOptions2::after {
+    transform: rotate(45deg);
+}
+.selected-image .image-update-options #imageButtonOptions2::before {
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+
+.selected-image .image-update-options .accept-btn{
+    background: var(--primary);
+    border: none;
+    outline: none;
+}
+.selected-image .image-update-options .cancel-btn {
+    background: rgb(231, 41, 41);
+    text-decoration: none;
+}
+
+/* PROFILE DATA */
+.profile-data-container form {
+    margin-bottom: 60px;
+    transition: .3s all ease;
+}
+
+.profile-data, 
+.profile-networks {
+    margin-bottom: 60px;
+    padding-top: 30px;
+}
+h3.data-title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+.data-fields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    transition: .3s all ease;
+}
+.data-fields .field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: .3s all ease;
+}
+.field label {
+    margin-bottom: 10px;
+    color: var(--gray);
+    font-weight: 500;
+}
+.field div {
+    position: relative;
+}
+.field div input,
+.field div select {
+    background: var(--white);
+    border: 1px solid var(--lightgray);
+    color: var(--lightgray);
+    padding: 10px 10px 10px 40px;
+    border-radius: 4px;
+    width: 300px;
+    height: 40px;
+    font-size: .9em;
+    font-weight: 500;
+    letter-spacing: .5px;
+    outline: none;
+}
+.field div select {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 8px;
+}
+.field div input:focus {
+    color: var(--dark);
+    border: 2px solid var(--primary);
+    transition: .005s all ease-in-out;
+}
+.field div input:focus + span ion-icon {
+    color: var(--clr);
+    transition: .2s all ease-in-out;
+}
+.field div input:focus + span {
+    color: var(--primary);
+    transition: .2s all ease-in-out;
+}
+.field div input[disabled] {
+    background: var(--secondary);
+}
+.field div span {
+    position: absolute;
+    font-size: 1.6em;
+    top: 7px;
+    left: 8px;
+    font-weight: 600;
+    color: var(--lightgray);
+}
+.border-bottom {
+    border-bottom: 5px solid var(--secondary);
+    padding-bottom: 40px;
+}
+
+.form-button input {
+    background: var(--primary);
+    border: none;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+}
+
+
+/* QR CODE */
+.profile-qrcode {
+    width: 200px;
+    height: 100%;
+}
+.profile-qrcode .profileQR {
+    width: 200px;
+}
+.profileQR #capture
+{
+    width: 100%;
+    height: 200px;
+    border: 3px solid var(--lightgray);
+    padding: 8px;
+    overflow: hidden;
+}
+#capture #qrcode {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+#capture #qrcode img
+{
+    width: 95%;
+    height: 95%;
+    object-fit: contain;
+}
+
+div #btnDownloadQR {
+    width: 100%;
+    height: 40px;
+    border-top: none;
+    border: 3px solid var(--lightgray);
+    border-radius: 0 0 4px 4px;
+    background: var(--lightgray);
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+.profile-container .number-section
+{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    transition: .2s all ease-in-out;
+}
+.profile-container .number-section div
+{
+    position: relative;
+    background: var(--lightgray);
+    width: 30px;
+    height: 30px;
+    font-size: .9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    color: var(--white);
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: .2s all ease-in-out;
+}
+.profile-container .number-section div.active
+{
+    background: var(--primary);
+    color: var(--white);
+    transition: .2s all ease-in-out;
+}
+.profile-container .number-section div.unactive
+{
+    background: var(--primary);
+    color: var(--white);
+    transition: .2s all ease-in-out;
+}
+
+/* BACK CONTAINER */
+.back-btn-container
+{
+    position: absolute;
+    left: calc(250px + 15px);
+    top: 75px;
+    width: auto;
+    margin: auto;
+    transition: .3s all ease-in-out;
+}
+.back-btn-container a
+{
+    text-decoration: none;
+    color: var(--lightgray);
+    font-size: 1em;
+    font-weight: 500;
+    padding: 15px 20px 15px 20px;
+    border: none;
+    border-radius: 6px;
+    white-space: nowrap;
+    background: none;
+}
+.back-btn-container a ion-icon
+{
+    position: relative;
+    top: 5px;
+    left: -10px;
+    color: var(--lightgray);
+    font-size: 1.4em;
+    transition: .5s all ease;
+}
+.back-btn-container:hover a ion-icon
+{
+    animation: backnimation .45s alternate infinite;
+}
+@keyframes backnimation
+{
+    0%
+    {
+        left: -10px;
+    }
+    100%
+    {
+        left: 0px;
+    }
+}
+
+.hide
+{
+    display: none;
+    visibility: hidden;
+}
+
+
+/* ========================== */
+/* ========================== */
+/* ========================== */
+
+/* RESPONSIVE */
+@media screen and (max-width:1275px) {
+    .data-fields {
+        grid-template-columns: repeat(2, 1fr);
+        transition: .3s all ease;
+    }
+
+    .data-fields .field {
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        transition: .3s all ease;
+    }
+    .data-fields .field.profile-qr{
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width:940px) {
+    .data-fields {
+        grid-template-columns: repeat(1, 1fr);
+        transition: .3s all ease;
+    }
+    .data-fields .field {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .3s all ease;
+    }
+    .data-fields .field.profile-qr{
+        align-items: center;
+    }
+   h3.data-title {
+        font-size: 1.4em;
+    }
+    .profile-image-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .profile-qrcode {
+        width: 150px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .profile-qrcode .profileQR {
+        width: 150px;
+    }
+    .profileQR #capture
+    {
+        height: 150px;
+    }
+    #capture #qrcode {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+    #capture #qrcode img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+@media screen and (max-width:616px) {
+    .back-btn-container
+    {
+        left: calc(52px);
+        transition: .4s all ease;
+    }
+}
+

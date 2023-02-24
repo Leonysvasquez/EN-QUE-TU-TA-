@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+main {
+    position: absolute;
+    top: 200px;
+    text-align: center;
+    max-width: 650px;
+    padding: 0 20px;
+}
+main section {
+    letter-spacing: .5px;
+    line-height: 1.8em;
+    color: var(--dark);
+}
+
+section .icon {
+    font-size: 18em;
+    color: var(--primary);
+}

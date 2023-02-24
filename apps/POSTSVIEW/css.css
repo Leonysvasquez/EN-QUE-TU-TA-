@@ -1,0 +1,550 @@
+h1 {
+    text-align: center;
+    margin-top: 90px;
+    color: var(--primary);
+    padding: 0 20px;
+    font-weight: 500;
+    line-height: 1.1em;
+    width: calc(100% - 250px);
+    float: right;
+}
+main {
+    padding: 30px 30px 0;
+    width: calc(100% - 250px);
+    float: right;
+}
+main .posts-container {
+    width: 100%;
+    height: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    top: 60px;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    transition: all ease-in-out .3s;
+}
+.posts-container .post {
+    margin: 15px auto;
+    display: grid;
+    padding: 20px;
+    box-shadow: 0 0 5px var(--primary);
+    border-radius: 5px;
+}
+
+.posts-container .post div:first-child {
+    width: 200px;
+    height: 200px;
+    background: var(--bg);
+    background-size: cover;
+    border: 1px solid #000;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.posts-container .post div img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: white;
+}
+/* .posts-container .post div:hover img{
+    position: fixed;
+    top: calc(50% - 100px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    transform: scale(2) translateX(65px);
+    box-shadow: 0 0 20px #000000c3;
+    border-radius: 5px;
+}
+.posts-container .post div:focus-within img {
+    position: static;
+    width: 200px;
+    height: 200px;
+} */
+
+.posts-container .post div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.post div:last-child span {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2.5px;
+}
+.post div:last-child a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3em;
+    background: var(--secondary);
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+#reload {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1.1em;
+    font-weight: 500;
+    background: var(--white);
+    padding: 5px 15px;
+    white-space: nowrap;
+}
+#reload::before {
+    content: "";
+    position: absolute;
+    left: -14px;
+    width: 26px;
+    height: 26px;
+    background: var(--white);
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+
+@media screen and (max-width:1085px) {
+    main .posts-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* .posts-container .post div:hover img{
+        top: calc(50% - 150px);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: scale(1.6) translateX(85px);
+    } */
+
+}
+@media screen and (max-width:818px) {
+    main .posts-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+}
+/* @media screen and (max-width:725px) {
+    .posts-container .post div:hover img {
+        position: fixed;
+        top: calc(50% - 200px);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+        transform: scale(2) translateX(10px);
+    }
+}
+@media screen and (max-width:480px) {
+    .posts-container .post div:hover img{
+        position: fixed;
+        top: calc(50% - 170px);
+        width: 150px;
+        height: 150px;
+        transform: scale(2) translateX(10px);
+    }
+}
+@media screen and (max-width:400px) {
+    .posts-container .post div:hover img{
+        position: fixed;
+        top: calc(50% - 130px);
+        width: 130px;
+        height: 130px;
+        transform: scale(2) translateX(10px);
+    }
+} */
+@media screen and (max-width:390px) {
+    .posts-container .post {
+        transform: scale(.8);
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:616px) {
+    h1 {
+        width: calc(100% - 50px);
+        float: right;
+    }
+    main {
+        width: calc(100% - 50px);
+        float: right;
+    }
+    main .network-filter-posts {
+        width: calc(100% - 110px);
+    }
+}
+
+.network-filter-posts {
+    position: absolute;
+    top: 160px;
+    width: calc(100% - 310px);
+    right: 30px;
+    height: 45px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 8px solid var(--primary);
+    transition: all ease .5s;
+}
+.network-filter-posts::before {
+    content: '';
+    position: absolute;
+    width: 33.33%;
+    height: 45px;
+    background: var(--primary);
+    border-radius: 15px 15px 0 0;
+    top: 0;
+    z-index: -1;
+    transition: all ease-in-out .3s;
+}
+.network-filter-posts.activel::before {
+    transform: translateX(calc(-100% + 15px));
+    transition: all ease-in-out .3s;
+}
+.network-filter-posts.activer::before {
+    transform: translateX(calc(100% - 15px));
+    transition: all ease-in-out .3s;
+}
+
+.network-filter-posts div {
+    /* background: var(--secondary); */
+    text-align: center;
+    width: 33.33%;
+    padding: 7px 15px 0;
+    cursor: pointer;
+}
+
+.network-filter-posts div:last-child {
+    position: absolute;
+    top: 0;
+    background: var(--secondary);
+    z-index: -2;
+    height: 100%;
+    width: calc(100% - 30px);
+    border-radius: 15px 15px 0 0;
+    transition: all ease .5s;
+}
+.network-filter-posts div span {
+    font-size: 1.2em;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    color: var(--gray);
+    transition: all ease .5s;
+    transition-delay: .15s;
+}
+.network-filter-posts div.selected  span{
+    color: var(--white);
+    transition: all ease .5s;
+    transition-delay: .15s;
+}
+
+.post-sectioner {
+    position: relative;
+    top: 25px;
+}
+
+.post-sectioner .months {
+    height: auto;
+    transition: all ease-in-out .5s;
+}
+.post-sectioner .months .month {
+    border-bottom: 5px solid var(--white);
+    transition: all ease-in-out .5s;
+}
+.post-sectioner .months .month:last-child {
+    border-bottom: none;
+}
+.post-sectioner .months .weeks {
+    height: 0;
+    border: 5px solid var(--secondary);
+    border-top: none;
+    overflow: hidden;
+    transition: all ease-in-out .3s;
+}
+.post-sectioner .months .weeks .week {
+    margin-bottom: 30px;
+}
+
+.post-sectioner .months.expanded .weeks {
+    height: 500px;
+    overflow-y: scroll;
+    transition: all ease-in-out .3s;
+}
+
+
+.post-sectioner .months .weeks .week-head {
+    width: calc(100% - 55px);
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+    position: relative;
+    left: 40px;
+    top: 15px;
+    color: var(--gray);
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 5px 0;
+}
+.post-sectioner .months .weeks .week-head::after {
+    width: calc(100% - 60px);
+    content: '';
+    position: absolute;
+    width: calc(100% + 30px);
+    height: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+    left: -25px;
+    border-radius: 10px;
+    background: var(--primary);
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+    z-index: -1;
+}
+
+.post-sectioner .months .weeks .week-head.expanded::after {
+    height: 100%;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+.post-sectioner .months .weeks .week-head.expanded {
+    color: var(--white);
+}
+
+
+.post-sectioner .months .weeks .week-head.expanded + .posts-container {
+    height: auto;
+    margin-bottom: 60px;
+    overflow: visible;
+    transition: all ease-in-out .3s;
+}
+.post-sectioner .months .weeks .week-head span.rotate {
+    transform: rotate(360deg);
+    transition: all ease-in-out .3s;
+}
+.post-sectioner .months .month-head {
+    height: 45px;
+    background: var(--secondary);
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--primary);
+    cursor: pointer;
+}
+.post-sectioner .months .month-head span {
+    position: absolute;
+    right: 15px;
+    transform: rotate(270deg);
+    transition: all ease-in-out .3s;
+}
+.post-sectioner .months .month-head span.rotate {
+    transform: rotate(360deg);
+    transition: all ease-in-out .3s;
+}
+
+.post-sectioner .months .weeks .week-head::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 2px;
+    background: var(--primary);
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    transition: all ease-in-out .25s;
+}
+.post-sectioner .months .weeks .week-head.expanded::before {
+    background: var(--white);
+}
+
+.plan-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.plan-section div div select {
+    width: auto;
+    min-width: 55px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 1em;
+}
+.plan-section div div fieldset {
+    border: none;
+    color: var(--gray);
+}
+.plan-section div div fieldset div {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: fit-content;
+}
+.plan-section div div fieldset div .selectService {
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+.plan-section div div fieldset div .selectNet{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    font-size: 1.2em;
+    text-align: center;
+}
+.plan-section div div fieldset div .selectService {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    font-size: 1.2em;
+    text-align: center;
+}
+.plan-section div div fieldset div .selectNet label {
+    padding-left: 20px;
+    position: relative;
+    font-size: 1em;
+}
+.plan-section div div fieldset div .selectService label {
+    /* padding-left: 5px; */
+    position: relative;
+    font-size: 1em;
+}
+.plan-section div div fieldset div .selectNet input:checked + label,
+.plan-section div div fieldset div .selectService input:checked + label {
+    color: var(--clr);
+    font-weight: 500;
+}
+.plan-section div div fieldset div .selectNet label ion-icon {
+    position: absolute;
+    left: -5px;
+    font-size: 1.3em;
+}
+.plan-section div div fieldset div .selectNet input:checked + label ion-icon{
+    color: var(--clr);
+}
+.plan-section div div fieldset div .selectNet div,
+.plan-section div div fieldset div .selectService div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.plan-section div div fieldset div .selectNet div:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.plan-section div div fieldset div .selectService div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 1em;
+}
+.plan-section div div fieldset div .selectService:first-child div {
+    font-size: 1em;
+}
+.plan-section div div fieldset input[type="checkbox"],
+.plan-section div div input[type="checkbox"],
+.plan-section div div fieldset input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    filter: hue-rotate(-25deg) brightness(1);
+}
+.plan-section div div fieldset ol li {
+    list-style: none;
+}
+
+main .plan-section div h3 {
+    color: var(--primary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    position: relative;
+}
+main .plan-section div h3 span {
+    position: absolute;
+    left: 38px;
+    bottom: -13px;
+    font-size: .5em;
+    color: var(--lightgray);
+    font-weight: 400;
+}
+.plan-section div h2 {
+    color: var(--primary);
+    padding-left: 5px;
+    font-size: 1.5em;
+}
+.plan-section div h3 ion-icon {
+    font-size: 1.2em;
+    position: relative;
+    left: -10px;
+}
+
+.plan-section > div.value {
+    border-top: 2px solid var(--primary);
+}
+.plan-section div h2 {
+    color: var(--primary);
+    padding-left: 5px;
+    font-size: 2.4em;
+    font-weight: 600;
+}
+.plan-section div p {
+    color: var(--gray);
+    font-size: 1.4em;
+    position: relative;
+    top: -10px;
+    font-weight: 500;
+}
+.plan-section div p label {
+    color: var(--primary);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.plan-section div:last-child div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: .8em;
+    column-gap: 10px;
+}
+.plan-section div:last-child div:nth-child(2) {
+    margin-bottom: 10px;
+}
+.plan-section div:last-child div:nth-child(2) input[type="submit"] {
+    margin: 15px 0;
+    padding: 10px 15px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+a {
+    color: var(--primary);
+}
