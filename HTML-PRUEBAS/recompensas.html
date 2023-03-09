@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/PRACTICA HTML CSS/Css/recompensas.css">
+    <link rel="stylesheet" href="/HTML-PRUEBAS/Css_prueba/recompensas.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Recompensas</title>
 </head>
@@ -18,9 +18,73 @@
             </div>
         </div>
         <div class="recom-end">
-            <input type="button" value="Crear Recompensas" class="btn_c"> 
-            <p>Establecimiento: Salon Euphoria</p>
+            <button onclick="mostrarFormulario()" class="btn_c">Crear Recompensas</button>
+            <p class="parrafo">Establecimiento: Salon Euphoria</p> 
         </div>
     </div>
+    <div id="formulario" style="display:none">
+        <form>
+            <i onclick="ocultarFormulario()">X</i>
+                <ul class="tab">
+                <li><a href="#" class="tablinks active" onclick="openTab(event, 'tab1')">Pestaña 1</a></li>
+                <li><a href="#" class="tablinks" onclick="openTab(event, 'tab2')">Pestaña 2</a></li>
+                </ul>
+            <div id="tab1" class="tabcontent" style="display:block">
+                <h3>Pestaña 1</h3>
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                </p>
+                <p>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido">
+                </p>
+            </div>
+            <div id="tab2" class="tabcontent" style="display:none">
+                <h3>Pestaña 2</h3>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </p>
+                <p>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </p>
+            </div>
+        </form>
+    </div>
+    <script>
+        function mostrarFormulario() {
+        document.getElementById("formulario").style.display = "block";
+        document.getElementById("tab1").style.display = "block";
+        document.getElementById("tab2").style.display = "none";
+    }
+    function openTab(event, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += " active";
+        
+        if (tabName === "tab2" && document.getElementById("formulario").style.display !== "block") {
+        document.getElementById("formulario").style.display = "block";
+        document.getElementById("tab1").style.display = "block";
+        document.getElementById("tab2").style.display = "none";
+        }
+    }
+    function mostrarFormulario() {
+        document.getElementById("formulario").style.display = "block";
+    }
+
+    function ocultarFormulario() {
+        document.getElementById("formulario").style.display = "none";
+    }
+    </script>
 </body>
 </html>
