@@ -1,0 +1,10 @@
+h3, .total, .recom-end{
+    display: inline-flex;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.recom-end .btn_c{
+    
+}
