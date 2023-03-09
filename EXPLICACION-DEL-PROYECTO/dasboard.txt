@@ -1,0 +1,86 @@
+HEADER
+
+<?php: Inicia un bloque de código PHP.
+
+include("php/connection.php");: Incluye un archivo PHP que contiene la conexión a la base de datos.
+
+session_start();: Inicia la sesión del usuario.
+
+$usermail = $_SESSION["usermail"];: Obtiene el correo electrónico del usuario que ha iniciado sesión a través de la variable de sesión "usermail".
+
+if(!isset($usermail)): Verifica si la variable $usermail no está definida.
+
+header("Location: php/logout.php");: Si la variable $usermail no está definida, redirige al usuario a la página de logout.
+
+else: Si la variable $usermail está definida, continúa con la lógica.
+
+$sql = "SELECT * FROM users WHERE email = '$usermail'";: Crea una consulta SQL para obtener los datos del usuario que ha iniciado sesión.
+
+$query = mysqli_query($connection, $sql);: Ejecuta la consulta SQL utilizando la conexión a la base de datos y almacena el resultado en una variable.
+
+$row = mysqli_fetch_array($query);: Obtiene los resultados de la consulta SQL como un array asociativo y los almacena en una variable.
+
+$sqlAnalitycs = "SELECT * FROM readed WHERE read_usermail = '$usermail'";: Crea una consulta SQL para obtener los datos de las lecturas realizadas por el usuario.
+
+$queryAnalitycs = mysqli_query($connection, $sqlAnalitycs);: Ejecuta la consulta SQL utilizando la conexión a la base de datos y almacena el resultado en una variable.
+
+$rowAnalitycs = mysqli_fetch_array($queryAnalitycs);: Obtiene los resultados de la consulta SQL como un array asociativo y los almacena en una variable.
+
+$queryFollowers = mysqli_query($connection, "SELECT * FROM follows WHERE followed = '$usermail'");: Crea una consulta SQL para obtener los datos de los seguidores del usuario.
+
+?>: Finaliza el bloque de código PHP.
+
+<!DOCTYPE html>: Define el tipo de documento HTML.
+
+<html lang="en">: Define el idioma del documento HTML.
+
+<head>: Inicia el encabezado del documento HTML.
+
+<meta charset="UTF-8">: Define la codificación de caracteres del documento HTML.
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">: Define el modo de compatibilidad del navegador web.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Define el tamaño de la pantalla y la escala inicial del contenido.
+
+<title translate="no">CLOUDCODE - Dashboard</title>: Define el título del documento HTML.
+
+<script type="text/javascript" src="qr/jquery.min.js"></script>: Incluye el archivo jQuery.min.js.
+
+<script type="text/javascript" src="qr/qrcode.js"></script>: Incluye el archivo qrcode.js.
+
+<script type="text/javascript" src="html2canvas.js"></script>: Incluye el archivo html2canvas.js.
+
+<script type="text/javascript" src="html2canvas.min.js"></script>: Incluye el archivo html2
+
+
+ <!-- LEFT NAVIGATION BAR -->
+
+<aside class="sidenav">: Define una sección de la página HTML que contiene la barra de navegación lateral.
+
+<div class="toggle-menu" id="toggleMenu">: Crea un botón para abrir y cerrar la barra de navegación. 
+Tiene una clase "toggle-menu" para estilizar y un ID "toggleMenu" para controlarlo
+ con JavaScript.
+
+
+<div class="so1 sidenav-option active">: Define la primera opción de menú y le da la clase 
+"active" para indicar que es la opción seleccionada por defecto.
+
+<span class="material-symbols-outlined">bar_chart</span>: Inserta un icono de gráfico de barras.
+
+<span class="sidenav-option-name">Estadísticas</span>: Agrega el nombre de la opción de menú 
+"Estadísticas".
+
+<span class="material-symbols-outlined arrow-right">arrow_right</span>: Añade una flecha de 
+dirección para indicar que se puede hacer clic en la opción para ver más detalles.
+
+<div class="so2 sidenav-option">: Define la segunda opción de menú.
+
+<span class="material-symbols-outlined">person</span>: Agrega un icono de persona.
+
+<span class="sidenav-option-name">Perfil</span>: Agrega el nombre de la opción de menú "Perfil".
+
+<span class="material-symbols-outlined arrow-right">arrow_right</span>: Añade una flecha de dirección
+ para indicar que se puede hacer clic en la opción para ver más detalles.
+
+Repite los pasos 7 a 10 para cada opción de menú adicional, cambiando el número y el nombre de la clase de cada div y el icono y nombre de la opción correspondiente.
+</aside>: Cierra la etiqueta de la barra de navegación lateral.
