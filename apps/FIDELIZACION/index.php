@@ -78,23 +78,38 @@ include("php/con.php");
             <div></div>
         </div>
         <div class="so1 sidenav-option active">
-            <span class="material-symbols-outlined">manage_accounts</span>
-            <span class="sidenav-option-name">Plan</span>
+            <span class="material-symbols-outlined">redeem</span>
+            <span class="sidenav-option-name">Stamp</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
-        <div class="so2 sidenav-option">
-            <span class="material-symbols-outlined">photo_library</span>
-            <span class="sidenav-option-name">Publicaciones</span>
+        <div class="so2 sidenav-option ">
+            <span class="material-symbols-outlined">stars</span>
+            <span class="sidenav-option-name">Puntos</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
-        <div class="so3 sidenav-option">
-            <span class="material-symbols-outlined">settings</span>
-            <span class="sidenav-option-name">Ajustes</span>
+        <div class="so3 sidenav-option  ">
+            <span class="material-symbols-outlined">storefront</span>
+            <span class="sidenav-option-name">Referidos</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
-        <div class="so4 sidenav-option">
-            <span class="material-symbols-outlined">help</span>
-            <span class="sidenav-option-name">Ayuda</span>
+        <div class="so4 sidenav-option ">
+            <span class="material-symbols-outlined">storefront</span>
+            <span class="sidenav-option-name">Marketing</span>
+            <span class="material-symbols-outlined arrow-right">arrow_right</span>
+        </div>
+        <div class="so5 sidenav-option">
+            <span class="material-symbols-outlined">credit_score</span>
+            <span class="sidenav-option-name">Gits Cards</span>
+            <span class="material-symbols-outlined arrow-right">arrow_right</span>
+        </div>
+        <div class="so6 sidenav-option ">
+            <span class="material-symbols-outlined">hotel_class</span>
+            <span class="sidenav-option-name">Recompensa</span>
+            <span class="material-symbols-outlined arrow-right">arrow_right</span>
+        </div>
+        <div class="so7 sidenav-option ">
+            <span class="material-symbols-outlined">storefront</span>
+            <span class="sidenav-option-name">Gamification</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
     </aside>
@@ -105,7 +120,7 @@ include("php/con.php");
         <section class="plan-section" id="planSection">
         <?php
             $planEmail = $array1["email"];
-
+        
             $canEdit = mysqli_query($con, "SELECT * FROM clientPlan WHERE plan_email = '$planEmail'");
             $canEditRow = mysqli_num_rows($canEdit);
             $canEditArray = mysqli_fetch_array($canEdit);
@@ -136,7 +151,7 @@ include("php/con.php");
                                 <div>Cantidad</div>
                             </div>
 
-                            <div class="selectNet">
+                            <div class="selectNet">         
                                 <div>
                                     <input type="checkbox" name="netFacebook" id="netFacebook" value="1">
                                     <label for="netFacebook"><ion-icon name="logo-facebook" style="--clr: #2778e2;"></ion-icon>Facebook</label>
@@ -552,7 +567,7 @@ include("php/con.php");
             <!-- TODOS LOS POST -->
             <div class="months" id="months">
                 <div class="month">
-                    <div class="month-head" id="monthHead" onclick="expandM(rotate, months)">VER TODOS
+                    <div class="month-head" id="monthHead" onclick="expandM(rotate, months)">VER PUNTOS
                         <span class="material-symbols-outlined" id="rotate">expand_more</span>
                     </div>
                     <div class="weeks" id="weeks">
@@ -3155,7 +3170,86 @@ include("php/con.php");
             <!-- ================== -->
             
         </div>
-    
+        <div class="sectionPuntos" id="sectionPuntos" hidden>
+                  <!--Main-->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <i class="bi bi-list"></i>
+                </div>
+                <!--search-->
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <i class="bi bi-search"></i>
+                    </label>
+                </div>
+                <!--user-->
+                <div class="user">
+                    <i class="bi bi-person"></i>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="/unnamed-1.png" alt="Imagen">
+            </div>
+            <h1>Poderosas heramientas de <span>fidelizacion</span></h1>
+            <div class="cardBox">
+                <div class="card">
+                    <div class="iconBx">
+                        <i class="bi bi-person-heart"></i>
+                        <div class="cardName">Fidelizacion</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="iconBx">
+                        <i class="bi bi-flower1"></i>
+                        <div class="cardName">Gamification</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="iconBx">
+                        <i class="bi bi-postage-fill"></i>
+                        <div class="cardName">Stamps</div>
+                    </div>
+                </div>
+                    <div class="card">
+                        <div class="iconBx">
+                            <i class="bi bi-patch-check-fill"></i>
+                            <div class="cardName">Puntos</div>
+                        </div>
+            </div>
+            <div class="card">
+                <div class="iconBx">
+                    <i class="bi bi-award-fill"></i>
+                    <div class="cardName">Recompensas</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="iconBx">
+                    <i class="bi bi-megaphone-fill"></i>
+                    <div class="cardName">Marketing</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="iconBx">
+                    <i class="bi bi-credit-card-2-back-fill"></i>
+                    <div class="cardName">Gits Cards</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="iconBx">
+                    <i class="bi bi-people-fill"></i>
+                    <div class="cardName">Referidos</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="iconBx">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <div class="cardName">Analytics</div>
+                </div>
+            </div>
+        </div>
+    </main>
         <script>
             let monthHead = document.getElementById("monthHead");
             let months = document.getElementById("months");

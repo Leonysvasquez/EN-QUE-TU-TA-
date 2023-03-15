@@ -89,26 +89,86 @@
             <div class="imagen">
                 <img src="/unnamed-1.png" alt="Imagen">
             </div>
-            
+            <h1>Poderosas heramientas de <span>fidelizacion</span></h1>
+            <div class="cardBox">
+                <div class="card">
+                    <div class="iconBx">
+                        <i class="bi bi-person-heart"></i>
+                        <div class="cardName">Fidelizacion</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="iconBx">
+                        <i class="bi bi-flower1"></i>
+                        <div class="cardName">Gamification</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="iconBx">
+                        <i class="bi bi-postage-fill"></i>
+                        <div class="cardName">Stamps</div>
+                    </div>
+                </div>
+                    <div class="card">
+                        <div class="iconBx">
+                            <i class="bi bi-patch-check-fill"></i>
+                            <div class="cardName">Puntos</div>
+                        </div>
+            </div>
+            <div class="card">
+                <div class="iconBx">
+                    <i class="bi bi-award-fill"></i>
+                    <div class="cardName">Recompensas</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="iconBx">
+                    <i class="bi bi-megaphone-fill"></i>
+                    <div class="cardName">Marketing</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="iconBx">
+                    <i class="bi bi-credit-card-2-back-fill"></i>
+                    <div class="cardName">Gits Cards</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="iconBx">
+                    <i class="bi bi-people-fill"></i>
+                    <div class="cardName">Referidos</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="iconBx">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <div class="cardName">Analytics</div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+    
     </div>
     <script>
-           //menuToggle//
-        let toggle = document.querySelector('.toggle');
-        let navigation = document.querySelector('.navigation');
-        let main = document.querySelector('.main');
-        
-        toggle.onclick = function(){
-            navigation.classList.toggle('acive')
-            main.classList.toggle('acive')
-        }
-        let list = document.querySelectorAll('.navigation li');
-        function activelink(){
-            list.forEach((item)=>
-            item.classList.remove('hovered'));
-            this.classList.add('hovered');
-        }
-        list.forEach((item) =>
-        item.addEventListener('mouseover', activelink));
-    </script>
+        //menuToggle//
+     let toggle = document.querySelector('.toggle');
+     let navigation = document.querySelector('.navigation');
+     let main = document.querySelector('.main');
+     
+     toggle.onclick = function(){
+         navigation.classList.toggle('acive')
+         main.classList.toggle('acive')
+     }
+     let list = document.querySelectorAll('.navigation li');
+     function activelink(){
+         list.forEach((item)=>
+         item.classList.remove('hovered'));
+         this.classList.add('hovered');
+     }
+     list.forEach((item) =>
+     item.addEventListener('mouseover', activelink));
+ </script>
 </body>
 </html>

@@ -65,7 +65,7 @@ include("php/con.php");
     </div>
     
     <header>
-        <a href="../../dashboard.php" id="reload">Volver a CLOUDCODE</a>
+        <a href="../../dashboard.php" id="reload">Volver a ENQUETUTA</a>
     </header>
 
     <h1>Bienvenid@ <b><?php echo $array1['cliente'];?></b></h1>
@@ -77,24 +77,54 @@ include("php/con.php");
             <div></div>
             <div></div>
         </div>
-        <div class="so1 sidenav-option active">
-            <span class="material-symbols-outlined">manage_accounts</span>
-            <span class="sidenav-option-name">Plan</span>
-            <span class="material-symbols-outlined arrow-right">arrow_right</span>
-        </div>
-        <div class="so2 sidenav-option">
-            <span class="material-symbols-outlined">photo_library</span>
-            <span class="sidenav-option-name">Publicaciones</span>
-            <span class="material-symbols-outlined arrow-right">arrow_right</span>
-        </div>
         <div class="so3 sidenav-option">
-            <span class="material-symbols-outlined">settings</span>
-            <span class="sidenav-option-name">Ajustes</span>
+            <span class="material-symbols-outlined">storefront</span>
+            <span class="sidenav-option-name">Tablero Principal</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
         <div class="so4 sidenav-option">
-            <span class="material-symbols-outlined">help</span>
-            <span class="sidenav-option-name">Ayuda</span>
+            <span class="material-symbols-outlined">paid</span>
+            <span class="sidenav-option-name">Caja</span>
+            <span class="material-symbols-outlined arrow-right">arrow_right</span>
+        </div>
+        <div class="so1 sidenav-option active">
+            <span class="material-symbols-outlined">point_of_sale</span>
+            <span class="sidenav-option-name">Ventas</span>
+            <span class="material-symbols-outlined arrow-right">arrow_right</span>
+        </div>
+        <div class="so7 sidenav-option">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span class="sidenav-option-name">Compras</span>
+            <span class="material-symbols-outlined arrow-right">arrow_right</span>
+        </div>
+        <div class="so5 sidenav-option">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <span class="sidenav-option-name">Productos</span>
+            <span class="material-symbols-outlined arrow-right">arrow_right</span>
+        </div>
+        <div class="so2 sidenav-option">
+            <span class="material-symbols-outlined">lab_profile</span>
+            <span class="sidenav-option-name">Reportes</span>
+            <span class="material-symbols-outlined arrow-right">arrow_right</span>
+        </div>
+        <div class="so6 sidenav-option">
+            <span class="material-symbols-outlined">group</span>
+            <span class="sidenav-option-name">Usuarios</span>
+            <span class="material-symbols-outlined arrow-right">arrow_right</span>
+        </div>  
+        <div class="so6 sidenav-option">
+            <span class="material-symbols-outlined">settings</span>
+            <span class="sidenav-option-name">Configuracion</span>
+            <span class="material-symbols-outlined arrow-right">arrow_right</span>
+        </div>      
+        <div class="so6 sidenav-option">
+            <span class="material-symbols-outlined">manage_accounts</span>
+            <span class="sidenav-option-name">Roles y Perfiles</span>
+            <span class="material-symbols-outlined arrow-right">arrow_right</span>
+        </div>
+        <div class="so6 sidenav-option">
+            <span class="material-symbols-outlined">exit_to_app</span>
+            <span class="sidenav-option-name">Salir</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
     </aside>
@@ -3155,7 +3185,6 @@ include("php/con.php");
             <!-- ================== -->
             
         </div>
-    
         <script>
             let monthHead = document.getElementById("monthHead");
             let months = document.getElementById("months");
