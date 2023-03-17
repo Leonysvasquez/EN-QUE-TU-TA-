@@ -10,6 +10,7 @@
     <title>Recompensa</title>
 </head>
 <body>
+    <!-- Header de la pagina -->
     <div class="header">
         <div class="recompensa">
             <i class="bi bi-award-fill"></i>
@@ -19,6 +20,7 @@
         </div>
         </div>
         <div class="recompensaend">
+            <!--Button para crear recompensa -->
             <button id="myButton" class="button">Crear Recompensa</button>
             <p class="parrafo">Establecimiento: Salon Euphoria</p>
         </div>
@@ -33,13 +35,16 @@
                     <div class="texto">
                         <h5>Nombre de la empresa :</h5><input type="text">
                     </div>
+                    <!--Botones para seleccionar los formularios -->
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-primary" onclick="openForm('left'); changeButtonColor(this)">Productos</button>
                         <button type="button" class="btn btn-primary" onclick="openForm('middle'); changeButtonColor(this)">Servicios</button>
                         <button type="button" class="btn btn-primary" onclick="openForm('right'); changeButtonColor(this)">Otros</button>
                     </div>
                 </div>
+                <!-- Formulario Para Productos -->
                 <div id="leftForm" class="form" style="display:none;">
+                    <!-- Contenido del formulario -->
                     <form>
                         <label for="name">Seleccione el Producto para su Recompensa</label>
                         <select required id="name" class="name">
@@ -89,6 +94,7 @@
                                 </select>
                             </div>
                         </div>
+                        <!-- Pie de la ventana modal -->
                         <div class="footer">
                             <div class="subir">
                                 <label for="subir" class="subir">Subir Imagen</label>
@@ -98,7 +104,9 @@
                         </div>
                     </form>
                 </div>
+                <!-- Formulario Para Servicios -->
                 <div id="middleForm" class="form" style="display:none;">
+                    <!-- Contenido del formulario -->
                     <form>
                         <label for="name">Seleccione el Servico para su Recompensa</label>
                         <select required id="name" class="name">
@@ -148,6 +156,7 @@
                                 </select>
                             </div>
                         </div>
+                        <!-- Pie de la ventana modal -->
                         <div class="footer">
                             <div class="subir">
                                 <label for="subir" class="subir">Subir Imagen</label>
@@ -157,8 +166,10 @@
                         </div>
                     </form>
                 </div>
+                <!-- Formulario Para otros -->
                 <div id="rightForm" class="form" style="display:none;">
                     <form>
+                        <!-- Contenido del formulario -->
                         <label for="name">Seleccione Otro para su Recompensa</label>
                         <select required id="name" class="name">
                             <option value="" selected>Seleccionar opción...</option>
@@ -207,6 +218,7 @@
                                 </select>
                             </div>
                         </div>
+                        <!-- Pie de la ventana modal -->
                         <div class="footer">
                             <div class="subir">
                                 <label for="subir" class="subir">Subir Imagen</label>
