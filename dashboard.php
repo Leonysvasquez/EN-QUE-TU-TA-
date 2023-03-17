@@ -49,7 +49,7 @@ if(!isset($usermail))
                 <div class="navbar-brand-logo">
                     <img src="img/logocloudcode-W.svg" alt="">
                 </div>
-                <span class="navbar-brand-name"><a href="">CLOUDCODE</a></span>
+                <span class="navbar-brand-name"><a href="">ENQUETUTA</a></span>
             </div>
 
             <div class="menu">
@@ -103,12 +103,37 @@ if(!isset($usermail))
                         <div class="app">
                             <a href="apps/POSTSVIEW">
                                 <div class="app-icon">
-                                    <span class="material-symbols-rounded">wysiwyg</span>
+                                    <span class="material-symbols-outlined">diversity_3</span>
                                 </div>
                                 <span class="app-name">Redes Sociales</span>
                             </a>
                         </div>
+                        <div class="app">
+                            <a href="apps/FIDELIZACION/index.php">
+                                <div class="app-icon">
+                                    <span class="material-symbols-outlined">workspace_premium</span>
+                                </div>
+                                <span class="app-name">Fidelizacion</span>
+                            </a>
+                        </div>
+                        <div class="app">
+                            <a href="apps/FIDELIZACIONN/index.php">
+                                <div class="app-icon">
+                                    <span class="material-symbols-outlined">workspace_premium</span>
+                                </div>
+                                <span class="app-name">Fidelizacion2</span>
+                            </a>
+                        </div>
+                        <div class="app">
+                            <a href="apps/PUNTO DE VENTA/index.php">
+                                <div class="app-icon">
+                                    <span class="material-symbols-outlined">receipt_long</span>
+                                </div>
+                                <span class="app-name">Punto De Venta</span>
+                            </a>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </nav>
@@ -516,6 +541,7 @@ if(!isset($usermail))
         <section class="section-schedules" hidden>
             <section class="heading-section">
                 <h2>Horarios</h2>
+                <img src ="/img/logocloudcode-WK.png"> >
             </section>
 
             <section class="schedules-container">

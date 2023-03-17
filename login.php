@@ -164,5 +164,5 @@ if(isset($usermail))
         history.back();
     }
 </script>
-<script src="js/sign-forms.js"></script>
+<script src="js/sign-for25061425ms.js"></script>
 </html>
