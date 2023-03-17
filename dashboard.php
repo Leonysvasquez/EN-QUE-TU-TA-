@@ -117,7 +117,7 @@ if(!isset($usermail))
                             </a>
                         </div>
                         <div class="app">
-                            <a href="apps/FIDELIZACIONN/index.php">
+                            <a href="apps/FIDELIZACION/index.php">
                                 <div class="app-icon">
                                     <span class="material-symbols-outlined">workspace_premium</span>
                                 </div>
