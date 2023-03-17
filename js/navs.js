@@ -138,8 +138,8 @@
         sectionDashboard.setAttribute("hidden", true);
         sectionProfile.setAttribute("hidden", true);
         sectionSchedules.setAttribute("hidden", true);
-        sectionServices.setAttribute("hidden", true);
-        sectionProducts.removeAttribute("hidden");
+        sectionServices.removeAttribute("hidden");
+        sectionProducts.setAttribute("hidden", true);
         sectionBanks.setAttribute("hidden", true);
         sectionUsers.setAttribute("hidden", true);
         sectionSettings.setAttribute("hidden", true);
@@ -160,8 +160,8 @@
         sectionProfile.setAttribute("hidden", true);
         sectionSchedules.setAttribute("hidden", true);
         sectionServices.setAttribute("hidden", true);
-        sectionProducts.setAttribute("hidden", true);
-        sectionBanks.removeAttribute("hidden");
+        sectionProducts.removeAttribute("hidden");
+        sectionBanks.setAttribute("hidden", true);
         sectionUsers.setAttribute("hidden", true);
         sectionSettings.setAttribute("hidden", true);
         sectionHelp.setAttribute("hidden", true);
