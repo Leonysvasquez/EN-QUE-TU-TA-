@@ -11,28 +11,11 @@
 </head>
 <body>
 
-<?php require_once 'includes/cabacera.php' ?>
+<?php require_once 'includes/sidebar.php' ?>
 <!--Main-->
-<div class="topbar">
-                <div class="toggle">
-                    <i class="bi bi-list"></i>
-                </div>
-                <!--search-->
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Search here">
-                        <i class="bi bi-search"></i>
-                    </label>
-                </div>
-                <!--user-->
-                <div class="user">
-                    <i class="bi bi-person"></i>
-                </div>
-            </div>
-            <div class="imagen">
+<?php   require_once 'includes/barra.php' ?>
+    <div class="imagen">
                 <img src="../img/photo-1575936123452-b67c3203c357.jpeg" alt="Imagen">
             </div>
-            
-    </div>
 </body>
 </html>

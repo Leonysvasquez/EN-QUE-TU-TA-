@@ -15,61 +15,63 @@
                 <li>
                     <a href="index.php">
                         <span class="icon"><i class="bi bi-house-door-fill"></i></span>
-                        <span class="title">CloudCode</span>
+                        <span class="title">CLOUDCODE</span>
                     </a>
                 </li>
                 <li>
                     <a href="index.php">
                         <span class="icon"><i class="bi bi-bag-dash-fill"></i></span>
-                        <span class="title">DashBoard</span>
+                        <span class="title">DASHBOARD</span>
                     </a>
                 </li>
                 <li>
                     <a href="puntos.php">
                         <span class="icon"><i class="bi bi-trophy-fill"></i></span>
-                        <span class="title">Puntos</span>
+                        <span class="title">PUNTOS</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span class="icon"><i class="bi bi-check-circle-fill"></i></span>
-                        <span class="title">Stamps</span>
+                        <span class="title">STAMPS</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span class="icon"><i class="bi bi-megaphone-fill"></i></span>
-                        <span class="title">Marketing</span>
+                        <span class="title">MARKETING</span>
                     </a>
                 </li>
                 <li>
                     <a href="recompensa.php">
                         <span class="icon"><i class="bi bi-award-fill"></i></span>
-                        <span class="title">Recompensas</span>
+                        <span class="title">RECOMPENSA</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span class="icon"><i class="bi bi-people-fill"></i></span>
-                        <span class="title">Referidos</span>
+                        <span class="title">REFERIDOS</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span class="icon"><i class="bi bi-controller"></i></span>
-                        <span class="title">Gamification</span>
+                        <span class="title">GAMIFICACION</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span class="icon"><i class="bi bi-credit-card"></i></span>
-                        <span class="title">Gits Cards</span>
+                        <span class="title">GIFT CARDS</span>
                     </a>
                 </li>
             </ul>
-        </div>
-        <div class="main">
+        </div> 
+    </div>
 
+    
+    <div class="main">
         <script>
         //menuToggle//
         let toggle = document.querySelector('.toggle');

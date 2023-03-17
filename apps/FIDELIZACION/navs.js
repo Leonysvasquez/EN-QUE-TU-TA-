@@ -8,13 +8,17 @@
     let so6 = document.querySelector(".so6");
     let so7 = document.querySelector(".so7");
 
+    let Stamps = document.querySelector(".sectionStamps");
+    let Puntos = document.querySelector(".sectionPuntos");
+    let Referidos = document.querySelector(".sectionReferidos");
+    let Marketing = document.querySelector(".sectionMarketing");
+    let GifCards = document.querySelector(".sectionGifCards");
+    let Recompensa = document.querySelector(".sectionRecompensa");
+    let Gamificacion = document.querySelector(".sectionGamificacion");
 
-    let planSectionForm = document.getElementById("planSectionForm");
-    let postSectioner = document.getElementById("postSectioner");
-    let sectionPuntos = document.getElementById("sectionPuntos");
-    //postSectioner.setAttribute("hidden", "true");
+    //postSectioner.setAttribute("hidden", true);
     
-   
+        
     // netSel.style.display = "none";
 
     so1.onclick = function(){
@@ -25,9 +29,17 @@
         so5.classList.remove("active");
         so6.classList.remove("active");
         so7.classList.remove("active");
+            
+        Stamps.removeAttribute("hidden");  
+        Puntos.setAttribute("hidden", true);
+        Referidos.setAttribute("hidden", true);
+        Marketing.setAttribute("hidden", true);
+        GifCards.setAttribute("hidden", true);
+        Recompensa.setAttribute("hidden", true);
+        Gamificacion.setAttribute("hidden", true);
 
-        planSectionForm.removeAttribute("hidden");
-        postSectioner.setAttribute("hidden", "true");
+
+    
         // netSel.style.display = "none";
     }
     so2.onclick = function(){
@@ -39,8 +51,16 @@
         so6.classList.remove("active");
         so7.classList.remove("active");
 
-        planSectionForm.setAttribute("hidden", "true");
-        sectionPuntos.removeAttribute("hidden");
+        Stamps.setAttribute("hidden", true);
+        Puntos.removeAttribute("hidden");
+        Referidos.setAttribute("hidden", true);
+        Marketing.setAttribute("hidden", true);
+        GifCards.setAttribute("hidden", true);
+        Recompensa.setAttribute("hidden", true);
+        Gamificacion.setAttribute("hidden", true);
+      
+
+        Puntos.removeAttribute("hidden");
         // netSel.style.display = "flex";
     }
     so3.onclick = function(){
@@ -52,10 +72,15 @@
         so6.classList.remove("active");
         so7.classList.remove("active");
 
-        sectionPuntos.removeAttribute("hidden");
-        postSectioner.setAttribute("hidden", "true");
-        planSectionForm.setAttribute("hidden", "true");
-        // netSel.style.display = "none";
+      
+
+        Stamps.setAttribute("hidden", true);
+        Puntos.setAttribute("hidden", true);
+        Referidos.removeAttribute("hidden");
+        Marketing.setAttribute("hidden", true);
+        GifCards.setAttribute("hidden", true);
+        Recompensa.setAttribute("hidden", true);
+        Gamificacion.setAttribute("hidden", true);
 
     }
     so4.onclick = function(){
@@ -67,9 +92,13 @@
         so6.classList.remove("active");
         so7.classList.remove("active");
 
-        planSectionForm.removeAttribute("hidden");
-        postSectioner.setAttribute("hidden", "true");
-        // netSel.style.display = "none";
+        Stamps.setAttribute("hidden", true);
+        Referidos.setAttribute("hidden", true);
+        Puntos.setAttribute("hidden", true);
+        Marketing.removeAttribute("hidden");
+        GifCards.setAttribute("hidden", true);
+        Recompensa.setAttribute("hidden", true);
+        Gamificacion.setAttribute("hidden", true);
     
     so5.onclick = function(){
             this.classList.add("active");
@@ -80,9 +109,13 @@
             so6.classList.remove("active");
             so7.classList.remove("active");
 
-            planSectionForm.removeAttribute("hidden");
-            postSectioner.setAttribute("hidden", "true");
-            // netSel.style.display = "none";
+            Stamps.setAttribute("hidden", true);
+            Referidos.setAttribute("hidden", true);
+            Marketing.setAttribute("hidden", true);
+            Puntos.setAttribute("hidden", true);
+            GifCards.removeAttribute("hidden");
+            Recompensa.setAttribute("hidden", true);
+            Gamificacion.setAttribute("hidden", true);
     }
     so6.onclick = function(){
         this.classList.add("active");
@@ -93,9 +126,14 @@
         so5.classList.remove("active");
         so7.classList.remove("active");
 
-        planSectionForm.removeAttribute("hidden");
-        postSectioner.setAttribute("hidden", "true");
-}
+        Stamps.setAttribute("hidden", true);
+        Referidos.setAttribute("hidden", true);
+        Marketing.setAttribute("hidden", true);
+        GifCards.setAttribute("hidden", true);
+        Puntos.setAttribute("hidden", true);
+        Recompensa.removeAttribute("hidden");
+        Gamificacion.setAttribute("hidden", true);
+    }
     so7.onclick = function(){
         this.classList.add("active");
         so1.classList.remove("active");
@@ -105,7 +143,12 @@
         so5.classList.remove("active");
         so6.classList.remove("active");
 
-        planSectionForm.removeAttribute("hidden");
-        postSectioner.setAttribute("hidden", "true");
+        Stamps.setAttribute("hidden", true);
+        Referidos.setAttribute("hidden", true);
+        Marketing.setAttribute("hidden", true);
+        GifCards.setAttribute("hidden", true);
+        Recompensa.setAttribute("hidden", true);
+        Puntos.setAttribute("hidden", true);
+        Gamificacion.removeAttribute("hidden");
     }
 }

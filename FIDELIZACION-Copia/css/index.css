@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif, 'Ubuntu';
+    font-family: "Poppins", "Arial", sans-serif;
 }
 :root{
     --blue: #3498db;
@@ -14,12 +14,13 @@
 body{
     min-height: 100vh;
     overflow: hidden;
-    overflow-y: scroll
+    overflow-y: scroll;
+    text-transform: uppercase;
 }
 .container{
     position: relative;
     width: 100px;
-    
+    text-transform: uppercase;
 }
 .navigation{
     position: fixed;
@@ -29,6 +30,7 @@ body{
     border-left: 10px solid var(--blue);
     transition: 0.5s;
     overflow: hidden;
+    text-transform: uppercase;
 }
 .navigation.acive{
     width: 80px;
@@ -38,6 +40,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    text-transform: uppercase;
 }
 .navigation ul li{
     position: relative;
@@ -45,6 +48,7 @@ body{
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    text-transform: uppercase;
 }
 .navigation ul li:hover, 
 .navigation ul li.hovered{
@@ -61,6 +65,7 @@ body{
     display: flex;
     text-decoration: none;
     color: var(--white);
+    text-transform: uppercase;
 }
 .navigation ul li:hover a,
 .navigation ul li.hovered a{
@@ -73,6 +78,7 @@ body{
     height: 60px;
     line-height: 70px;
     text-align: center;
+    text-transform: uppercase;
 }
 .navigation ul li a .icon i{
     font-size: 1.7em;
@@ -85,6 +91,7 @@ body{
     line-height: 60px;
     text-align: start;
     white-space: nowrap;
+    text-transform: uppercase;
 }
 .navigation ul li:hover a::before,
 .navigation ul li.hovered a::before{
@@ -98,6 +105,7 @@ body{
     border-radius: 50%;
     box-shadow: 35px 35px 0 10px var(--white);
     pointer-events: none;
+    text-transform: uppercase;
 }
 .navigation ul li:hover a::after, 
 .navigation ul li.hovered a::after{
@@ -118,6 +126,7 @@ body{
     min-height: 100px;
     background: var(--white);
     transition: 0.5s;
+    text-transform: uppercase;
 }
 .main.acive{
     left: 80px;
@@ -129,6 +138,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+    text-transform: uppercase;
 }
 .toggle{
     position: relative;
@@ -139,6 +149,7 @@ body{
     align-items: center;
     font-size: 2.5em;
     cursor: pointer;
+    left: 150px;
 }
 .search{
     position: relative;
