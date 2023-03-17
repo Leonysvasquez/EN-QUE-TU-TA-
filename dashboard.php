@@ -39,6 +39,7 @@ if(!isset($usermail))
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    
 </head>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -573,22 +574,45 @@ if(!isset($usermail))
             </section>
         </section>
 
-        <section class="section-products" hidden>
+    <section class="section-products" hidden>
             <section class="heading-section">
                 <h2>Productos</h2>
-            </section>
+    </section>
 
-            <section class="products-container">
-                <div>
-                    <!-- <h3 class="data-title">Publicaciones</h3> -->
-                    <div class="data-fields">
-                        <div class="field">
-                            Próximamente...
-                        </div>
-                    </div>
+    <section class="products-container">
+        <div class="container mt-5">
+            <h1>Registro de productos</h1>
+            <!-- Creamos el formulario para ingresar los datos del producto -->
+            <form method="post" action="guardar_producto.php">
+            <div class="form-group">
+                    <label for="nombre-cliente">Nombre  Cliente</label>
+                    <input type="text" class="form-control" id="nombre-cliente" name="nombre-client" required>
                 </div>
-            </section>
-        </section>
+                <div class="form-group">
+                    <label for="nombre">Nombre del producto</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo de producto</label>
+                    <input type="text" class="form-control" id="tipo" name="tipo" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input type="number" class="form-control" id="precio" name="precio" required>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoría</label>
+                    <input type="text" class="form-control" id="categoria" name="categoria" required>
+                </div>
+                <div class="form-group">
+                    <label for="stock">Stock</label>
+                    <input type="number" class="form-control" id="stock" name="stock" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+        </div>
+    </section>
+</section>
 
         <section class="section-banks" hidden>
             <section class="heading-section">

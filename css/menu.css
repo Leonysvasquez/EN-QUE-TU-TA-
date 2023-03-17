@@ -263,7 +263,7 @@ header .navbar{
     width: 250px;
     position: fixed;
     top: 60px;
-    background: var(--secondary);
+    background-color: #3498db !important;
     padding: 60px 0;
     overflow: hidden;
     z-index: 1;
