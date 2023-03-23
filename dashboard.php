@@ -169,7 +169,7 @@ if(!isset($usermail))
         </div>
         <div class="so5 sidenav-option">
             <span class="material-symbols-outlined">inventory_2</span>
-            <span class="sidenav-option-name">Productos</span>
+            <span class="sidenav-option-name">Productos</span>      
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
         <div class="so6 sidenav-option">
@@ -574,14 +574,17 @@ if(!isset($usermail))
             </section>
         </section>
 
-    <section class="section-products" hidden>
-            <section class="heading-section">
-                <h2>Productos</h2>
-    </section>
+<section class="section-products" hidden>
+            <section class="heading-section">                
+              Productos
+            </section>
 
+      
     <section class="products-container">
+    
+   
         <div class="container mt-5">
-            <h1>Registro de productos</h1>
+          <a href=""></a>  <h1>Registro de productos</h1>
             <!-- Creamos el formulario para ingresar los datos del producto -->
             <form method="post" action="guardar_producto.php">
             <div class="form-group">

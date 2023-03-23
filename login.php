@@ -39,7 +39,7 @@ if(isset($usermail))
         </div>
         <div class="formBx">
             <div class="form signinForm">
-                <form action="" method="POST">
+                <form action="login.php" method="POST">
                     <span class="material-symbols-rounded">login</span>
                     <h3>Iniciar sesión</h3>
                     <input type="email" placeholder="Usuario" name="username" required>
@@ -95,7 +95,7 @@ if(isset($usermail))
                 </form>
             </div>
             <div class="form signupForm">
-                <form action="" method="POST"  autocomplete="off">
+                <form action="login.php" method="POST"  autocomplete="off">
                     <span class="material-symbols-rounded">person_add</span>
                     <h3>Registrarse</h3>
                     <input type="text" placeholder="Nombre" name="name" required>

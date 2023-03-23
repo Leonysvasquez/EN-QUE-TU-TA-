@@ -38,7 +38,6 @@ header .navbar{
     font-size: 1.8em;
     font-weight: 600;
     letter-spacing: 1px;
-    text-decoration: none;
     color: var(--white);
 }
 
@@ -263,7 +262,7 @@ header .navbar{
     width: 250px;
     position: fixed;
     top: 60px;
-    background-color: #3498db !important;
+    background: var(--secondary);
     padding: 60px 0;
     overflow: hidden;
     z-index: 1;
@@ -284,22 +283,24 @@ header .navbar{
     text-transform: uppercase;
     position: relative;
     transition: .1s all ease-in-out;
+    background: var(--secondary);
 }
 .sidenav-option:hover {
     background: var(--white);
     transition: .15s all linear ease-in-out;
 }
-.sidenav-option span:first-child {
-    font-size: 2em;
+/* .sidenav-option span:first-child {
     font-weight: 600;
     color: var(--primary);
-}
+} */
 .sidenav-option-name {
     margin-left: 15px;
     font-size: 1em;
     font-weight: 500;
-    color: var(--gray);
+    color: var(--light);
     transition: .3s all ease-in-out;
+    list-style: none;
+    text-decoration: none;   
 }
 
 .sidenav-option .arrow-right{
@@ -423,7 +424,8 @@ header .navbar{
         font-size: 1.8em;
         font-weight: 600;
         color: var(--primary);
-        transition: .3s all ease-in-out;
+        transition: .3s all ease-in250614
+        `-out;
     }
     .sidenav-option .arrow-right{
         right: -10px;
