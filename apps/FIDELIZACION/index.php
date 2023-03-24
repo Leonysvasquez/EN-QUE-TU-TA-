@@ -67,7 +67,94 @@ include("php/con.php");
     </div>
     
     <header>
-        <a href="../../dashboard.php" id="reload">Volver a CLOUDCODE</a>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <div class="navbar-brand-logo">
+                    <img src="./img/logo_enquetuta.svg" alt="">
+                </div>
+                <span class="navbar-brand-name"><a href="">FIDELIZACION</a></span>
+            </div>
+
+            <div class="menu">
+                
+                <div class="dropdown user-dropdown">
+                    <div class="user-img">
+                        <img src="
+                        <?php
+                            if ($row['logo'] == "")
+                            {
+                                echo "/img/def-profile.png";
+                            } else {
+                                echo "data:image/*;base64,".base64_encode($row['logo']);
+                            }
+                        ?>" alt="">
+                    </div>
+                    <div class="dropdown-content" id="user-dropdown-content">
+                        <a href="php/logout.php"><span class="material-symbols-outlined">logout</span>Cerrar Sesión</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown notification-dropdown">
+                    <span class="material-symbols-outlined dropdown-arrow" id="notification-arrow">arrow_drop_down</span>
+                    <div class="menu-item-icon">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </div>
+                    <div class="dropdown-content" id="notification-dropdown-content">
+                        <ul class="notification-list">
+                            <li class="notification">
+                                <a href="">
+                                    <span class="notification-content">Aún no tiene notificaciones.</span>
+                                </a>
+                            </li>
+                            <!-- <li class="notification">
+                                <a href="">
+                                    <span class="notification-content">Esta es una notificacion</span>
+                                    <span class="notification-date">06/06/2022</span>
+                                </a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dropdown apps-dropdown">
+                    <span class="material-symbols-outlined dropdown-arrow" id="apps-arrow">arrow_drop_down</span>
+                    <div class="menu-item-icon">
+                        <span class="material-symbols-outlined">apps</span>
+                    </div>
+                    
+                    <div class="dropdown-content" id="apps-dropdown-content">
+                        <div class="app">
+                            <a href="apps/POSTSVIEW">
+                                <div class="app-icon">
+                                    <span class="material-symbols-outlined btn-fidelizacion">diversity_3</span>
+                                </div>
+                                <span class="app-name">Redes Sociales</span>
+                            </a>
+                        </div>
+                    
+                        <div class="app">
+                            <a href="apps/FIDELIZACION/index.php">
+                                <div class="app-icon">
+                                    <span class="material-symbols-outlined">workspace_premium</span>
+                                </div>
+                                <span class="app-name">Fidelizacion</span>
+                            </a>
+                        </div>
+                        <div class="app">
+                            <a href="apps/PUNTO DE VENTA/index.php">
+                                <div class="app-icon">
+                                    <span class="material-symbols-outlined">receipt_long</span>
+                                </div>
+                                <span class="app-name">Punto De Venta</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
     </header>
 
     <h1>Bienvenid@ <b><?php echo $array1['cliente'];?></b></h1>
@@ -114,6 +201,7 @@ include("php/con.php");
             <span class="sidenav-option-name">Gamification</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
+        <a href="../../dashboard.php" id="reload">Volver a EN-QUE-TU-TA</a>
     </aside>
     <main>
         

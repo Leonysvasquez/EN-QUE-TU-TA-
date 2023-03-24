@@ -15,18 +15,105 @@ require 'conexion.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/siderbar.css">
     <title>Productos CRUD</title>
  
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+    :root
+{
+    --primary: #2279A7;
+    --secondary: #3498db;
+    --dark: #06151d;
+    --gray: #424949;
+    --lightgray: #a0a0a0;
+    --light: #f0f4f6;
+    --white: #FBFCFC;
+}
+
+        /* Estilos para la cabecera */
+header {
+  background-color: #ffffff;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #ffffff;
+}
+.btn-back-venta{
+    color: #ffffff;
+}
+#reload {
+  text-decoration: none;
+  color: #212529;
+  font-weight: bold;
+}
+
+/* Estilos para la barra lateral */
+.sidenav {
+  background-color: #212529;
+  color: #ffffff;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.sidenav-option:hover {
+  cursor: pointer;
+  background-color: #343a40;
+  color: #3498db;
+}
+
+.active {
+  background-color: #343a40;
+  color: #2279A7;
+}
+
+.material-symbols-outlined {
+  margin-right: 10px;
+}
+
+.arrow-right {
+  margin-left: 10px;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+  margin-top: 60px;
+  margin-left: 200px;
+  padding: 20px;
+}
+
+.card-header {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.card-body {
+  background-color: #ffffff;
+}
+
+    </style>
 </head>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <body>
     <header>
-        <a href="../../PUNTO DE VENTA/index.php" id="reload">Volver a Punto de Ventas</a>
-    </header>00000`
+        <a href="../../PUNTO DE VENTA/index.php" id="reload" class="btn btn-primary float-end">Volver a Punto de Ventas</a>
+    </header>
 
 
     <!-- LEFT NAVIGATION BAR -->
@@ -36,57 +123,58 @@ require 'conexion.php';
             <div></div>
             <div></div>
         </div>
-        <div class="so3 sidenav-option">
+        <div class="so1 sidenav-option">
             <span class="material-symbols-outlined">storefront</span>
             <span class="sidenav-option-name">Tablero Principal</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
-        <div class="so4 sidenav-option">
+        <div class="so2 sidenav-option">
             <span class="material-symbols-outlined">paid</span>
             <span class="sidenav-option-name">Caja</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
-        <div class="so1 sidenav-option active">
+        <div class="so3 sidenav-option ">
             <span class="material-symbols-outlined">point_of_sale</span>
             <span class="sidenav-option-name">Ventas</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
-        <div class="so7 sidenav-option">
+        <div class="so4 sidenav-option">
             <span class="material-symbols-outlined">shopping_bag</span>
             <span class="sidenav-option-name">Compras</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
         <div class="so5 sidenav-option">
             <span class="material-symbols-outlined">shopping_cart</span>
-            <a href="./php/productos.php"><span class="sidenav-option-name">Productos</span></a>
+            <a href="../php/productos.php" class="sidenav-option-name"><span class="sidenav-option-name">Productos</span></a>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
-        <div class="so2 sidenav-option">
+        <div class="so6 sidenav-option">
             <span class="material-symbols-outlined">lab_profile</span>
             <span class="sidenav-option-name">Reportes</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
-        <div class="so6 sidenav-option">
+        <div class="so7 sidenav-option">
             <span class="material-symbols-outlined">group</span>
             <span class="sidenav-option-name">Usuarios</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>  
-        <div class="so6 sidenav-option">
+        <div class="so8 sidenav-option">
             <span class="material-symbols-outlined">settings</span>
             <span class="sidenav-option-name">Configuracion</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>      
-        <div class="so6 sidenav-option">
+        <div class="so9 sidenav-option">
             <span class="material-symbols-outlined">manage_accounts</span>
             <span class="sidenav-option-name">Roles y Perfiles</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
-        <div class="so6 sidenav-option">
+        <div class="so10 sidenav-option">
             <span class="material-symbols-outlined">exit_to_app</span>
             <span class="sidenav-option-name">Salir</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
     </aside> 
+    
     <div class="container mt-4">
 
         <?php include('message.php'); ?>
@@ -158,14 +246,7 @@ require 'conexion.php';
         </div>
     </div>
    <!-- Sección de JavaScript para el menú desplegable -->
-<script>
-  const toggleMenu = document.querySelector('#toggleMenu');
-  const sidenav = document.querySelector('.sidenav');
 
-  toggleMenu.addEventListener('click', () => {
-    sidenav.classList.toggle('active');
-  });
-</script>
                                  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 

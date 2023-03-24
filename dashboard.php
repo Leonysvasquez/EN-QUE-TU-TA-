@@ -48,7 +48,7 @@ if(!isset($usermail))
         <nav class="navbar">
             <div class="navbar-brand">
                 <div class="navbar-brand-logo">
-                    <img src="img/logocloudcode-W.svg" alt="">
+                    <img src="img/logo_enquetuta.svg" alt="">
                 </div>
                 <span class="navbar-brand-name"><a href="">ENQUETUTA</a></span>
             </div>
@@ -104,25 +104,18 @@ if(!isset($usermail))
                         <div class="app">
                             <a href="apps/POSTSVIEW">
                                 <div class="app-icon">
-                                    <span class="material-symbols-outlined">diversity_3</span>
+                                    <span class="material-symbols-outlined btn-fidelizacion">diversity_3</span>
                                 </div>
                                 <span class="app-name">Redes Sociales</span>
                             </a>
                         </div>
+                    
                         <div class="app">
                             <a href="apps/FIDELIZACION/index.php">
                                 <div class="app-icon">
                                     <span class="material-symbols-outlined">workspace_premium</span>
                                 </div>
                                 <span class="app-name">Fidelizacion</span>
-                            </a>
-                        </div>
-                        <div class="app">
-                            <a href="apps/FIDELIZACION/index.php">
-                                <div class="app-icon">
-                                    <span class="material-symbols-outlined">workspace_premium</span>
-                                </div>
-                                <span class="app-name">Fidelizacion2</span>
                             </a>
                         </div>
                         <div class="app">

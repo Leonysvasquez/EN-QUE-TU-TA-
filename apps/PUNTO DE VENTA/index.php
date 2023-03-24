@@ -55,9 +55,12 @@ include("php/con.php");
     <link rel="stylesheet" href="../../css/menu.css">
     <link rel="stylesheet" href="../../css/load.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"-->
+
 </head>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <body>
     <div class="load" id="load">
         <h2>Cargando...</h2>
@@ -65,10 +68,9 @@ include("php/con.php");
     </div>
     
     <header>
-        <a href="../../dashboard.php" id="reload">Volver a ENQUETUTA</a>
+        <a href="../../dashboard.php" id="reload" class="btn btn-primary float-start">Volver a EN-QUE-TU-TA</a>
     </header>
 
-    <h1>Bienvenid@ <b><?php echo $array1['cliente'];?></b></h1>
 
     <!-- LEFT NAVIGATION BAR -->
     <aside class="sidenav">
@@ -87,7 +89,7 @@ include("php/con.php");
             <span class="sidenav-option-name">Caja</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
-        <div class="so1 sidenav-option active">
+        <div class="so1 sidenav-option">
             <span class="material-symbols-outlined">point_of_sale</span>
             <span class="sidenav-option-name">Ventas</span>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
@@ -99,7 +101,7 @@ include("php/con.php");
         </div>
         <div class="so5 sidenav-option">
             <span class="material-symbols-outlined">shopping_cart</span>
-            <a href="./php/productos.php"><span class="sidenav-option-name">Productos</span></a>
+            <a href="./php/productos.php" style="text-decoration: none;"><span class="sidenav-option-name">Productos</span></a>
             <span class="material-symbols-outlined arrow-right">arrow_right</span>
         </div>
         <div class="so2 sidenav-option">
