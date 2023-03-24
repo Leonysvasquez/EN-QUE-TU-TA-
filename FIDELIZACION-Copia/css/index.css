@@ -2,26 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", "Arial", sans-serif;
+    font-family: sans-serif, 'Ubuntu';
 }
+/* Funciones para colores */
 :root{
     --blue: #3498db;
     --white: #fff;
     --grey: #f5f5f5;
     --black1: #222;
     --black2: #999;
+    --black1: #222;
+    --black2: #999;
+    --green:#1abc9c;
 }
+/* Cambios del body */
 body{
     min-height: 100vh;
     overflow: hidden;
     overflow-y: scroll;
-    text-transform: uppercase;
 }
+/* Contenido de la pagina */
 .container{
     position: relative;
-    width: 100px;
-    text-transform: uppercase;
+    max-width: 100px;
 }
+/* Estilo para la navegacion */
 .navigation{
     position: fixed;
     width: 300px;
@@ -30,17 +35,17 @@ body{
     border-left: 10px solid var(--blue);
     transition: 0.5s;
     overflow: hidden;
-    text-transform: uppercase;
 }
+/* Estilo para la navegacion cuando este activo */
 .navigation.acive{
     width: 80px;
 }
+/* Estilo para la lista de navegacion */
 .navigation ul{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    text-transform: uppercase;
+    width: 100%epa;
 }
 .navigation ul li{
     position: relative;
@@ -48,8 +53,8 @@ body{
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-    text-transform: uppercase;
 }
+/* Estilo para la lista de navegacion cuando se pasa el cursor */
 .navigation ul li:hover, 
 .navigation ul li.hovered{
     background: var(--white);
@@ -58,6 +63,7 @@ body{
     margin-bottom: 40px;
     pointer-events: none;
 }
+/* Estilo para la lista de navegacion para los link */
 .navigation ul li a{
     position: relative;
     display: block;
@@ -65,12 +71,13 @@ body{
     display: flex;
     text-decoration: none;
     color: var(--white);
-    text-transform: uppercase;
 }
+/* Estilo para la lista de navegacion cuando se pasa el cursor en el link */
 .navigation ul li:hover a,
 .navigation ul li.hovered a{
     color: var(--blue);
 }
+/* Estilo para los iconos de navegacion cuando se pasa el cursor */
 .navigation ul li a .icon{
     position: relative;
     display: block;
@@ -78,11 +85,12 @@ body{
     height: 60px;
     line-height: 70px;
     text-align: center;
-    text-transform: uppercase;
 }
+/* tamano del icono */
 .navigation ul li a .icon i{
     font-size: 1.7em;
 }
+/* estilo para los titulos de las listas */
 .navigation ul li a .title{
     position: relative;
     display: block;
@@ -91,21 +99,20 @@ body{
     line-height: 60px;
     text-align: start;
     white-space: nowrap;
-    text-transform: uppercase;
 }
+/* Estilo para la lista de navegacion cuando se pasa el cursor en el link */
 .navigation ul li:hover a::before,
 .navigation ul li.hovered a::before{
     content: '';
     position: absolute;
     right: 0;
     top: -50px;
-    width: 50px;
+    width: 50x;
     height: 50px;
     background: transparent;
     border-radius: 50%;
     box-shadow: 35px 35px 0 10px var(--white);
     pointer-events: none;
-    text-transform: uppercase;
 }
 .navigation ul li:hover a::after, 
 .navigation ul li.hovered a::after{
@@ -120,17 +127,20 @@ body{
     box-shadow: 35px -35px 0 10px var(--white);
     pointer-events: none;
 }
+/* Estilo para el main, el contenido que aparece en el centro */
 .main{
     position: absolute;
     left: 300px;
     min-height: 100px;
     background: var(--white);
     transition: 0.5s;
-    text-transform: uppercase;
+    width: 1000px;
 }
+/* estilo para cuando main este activo */
 .main.acive{
     left: 80px;
 }
+/* Estilo para el top del main */
 .topbar{
     width: 100%;
     height: 60px;
@@ -138,8 +148,8 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    text-transform: uppercase;
 }
+/* Estilo para las barras */
 .toggle{
     position: relative;
     width: 60px;
@@ -149,17 +159,19 @@ body{
     align-items: center;
     font-size: 2.5em;
     cursor: pointer;
-    left: 150px;
 }
+/* Estilo para el buscar*/
 .search{
     position: relative;
     width: 400px;
     margin: 0 10px;
 }
+/* Estilo para el label de el buscador */
 .search label{
     position: relative;
     width: 100%;
 }
+/* Estilo para del buscador input */
 .search label input{
     width: 100%;
     height: 40px;
@@ -170,12 +182,14 @@ body{
     outline: none;
     border: 1px solid var(--black2);
 }
+/* Estilo para buscador del icono */
 .search label i{
     position: absolute;
     top: 0;
     left: 10px;
     font-size: 1.2em;
 }
+/* Estilo para user */
 .user{
     position: relative;
     width: 40px;
@@ -184,6 +198,7 @@ body{
     overflow: hidden;
     cursor: pointer;
 }
+/* Estilo para el icono de user */
 .user i{
     position: absolute;
     display: flex;
@@ -195,48 +210,128 @@ body{
     height: 100%;
     object-fit: cover;
 }
-/*.cardBox{
+/* Estilos para los CardHeader de los contenidos en el main */
+.cardHeader{
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+/* Estilo para el titulo de la carta */
+.cardTitle{
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+/* Estilo para el numero */
+.cardNumber{
+    display: inline-block;
+    padding: 3px 45px 3px 40px;
+    border-radius: 5px;
+    border: 2px solid var(--black1);
+    font-size: 2.9em;
+    vertical-align: middle;
+}
+/* Para los botones */
+.sell{
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 600;
+}
+/* Estilos para los botones */
+.btn{
+    text-decoration: none;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+/* Estilos para los botones cuando se preciona */
+.btn:hover {
+    background-color: var(--black2);
+}
+/* Estilos para el div donde estan las tablas */
+.details{
+    position: relative;
+    max-width: 1000px;
+    min-height: 300px;
+    padding: 20px;
+}
+/* Estilos para las tablas */
+.details table {
     position: relative;
     width: 100%;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 30px;
-    margin: auto;
+    height: 100%;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-decoration: none;
+    border: 2px solid black;
+} 
+.details table thead td{
+    font-weight: 600;
 }
-.cardBox .card{
-    position: relative;
-    background: var(--white);
-    padding: 30px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+.details table td h4{
+    display: inline;
 }
-.cardBox .card:hover{
-    background: #00ccffa8;
+.details table tr:nth-child(even) {
+    background-color: var(--white);
+} 
+.details table tr:nth-child(odd) {
+    background-color: var(--blue); 
 }
-.cardBox .card .iconBx i{
-    font-size: 3.2em;
-    color: #1abc9c;
+.details table thead tr td{
+    background-color: var(--green);
 }
-.cardBox .card .cardName{
-    color: var(--black2);
-    font-size: 1.1em;
-    margin-top: 5px;
+.details table tr:nth-child(even) td h4 {
     color: var(--black1);
 }
-.cardBox .card :hover i{
+.details table tr:nth-child(odd) td h4 {
     color: var(--white);
 }
-.cardBox .card :hover .cardName {
-    color: var(--black1);
+.details table td{
+    padding: 10px;
 }
-.main h1{
-    text-align: center;
-    font-size: 1.7em;
+.details table td i{
+    margin-right: 20px;
+    font-size: 1.6em;
 }
-.main h1 span{
-    color: #1abc9c;
-}*/
+.details table td .btntr{
+    display: inline-flex;
+    align-items: flex-end;
+    text-decoration: none;
+    font-size: 1.1em;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 40px;
+    padding: 3px 20px;
+}
+/* Estilos para el check */
+.check{
+    transform: scale(2);
+    margin-right: 20px;
+}
+/* Estilo para el texto final  */
+.texto{
+    height: 23px;
+}
+/* Estilos para el cardheader de comprados */
+.carDHeader{
+    margin: auto;
+    padding: 20px;
+}
+/* Estilo para el h4 */
+.carDHeader h4{
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+/* estilos para el numero */
+.carDNumber{
+    display: inline;
+    padding: 3px 45px 3px 40px;
+    border-radius: 5px;
+    border: 2px solid var(--black1);
+    font-size: 2.5em;
+}

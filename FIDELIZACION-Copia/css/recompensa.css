@@ -108,6 +108,7 @@
     color: #fff;
     background-color: orange;
 }
+/* Diseno para el contenido de la ventana modal  */
 .contenedor {
     display: flex;
     justify-content: space-between;
@@ -164,6 +165,7 @@ h3, .total, p{
     margin-left: 10px;
     border-radius: 10px;
 }
+/* Aqui es el diseno para el pie de la ventana modal */
 .footer{
     display: flex;
     justify-content: space-between;

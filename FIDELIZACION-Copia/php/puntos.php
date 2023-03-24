@@ -16,7 +16,7 @@
 <?php require_once 'includes/sidebar.php'?>
 <!--Main-->
 <?php   require_once 'includes/barra.php' ?>
-<div class="main">
+    <div class="main">
         <div class="cardHeader">
             <div>
                 <h4 class="title">Balance General</h4>

@@ -12,7 +12,7 @@
     --black2: #999;
     --green:#1abc9c;
 }
-.main{
+.main1{
     position: relative;
     padding: 20px;
     width: 100%;
@@ -24,11 +24,11 @@
     display: flex;
     align-items: center;
 }
-.title{
+.cardTitle{
     margin-bottom: 10px;
     font-size: 1.6em;
 }
-.number{
+.cardNumber{
     display: inline-block;
     padding: 3px 45px 3px 40px;
     border-radius: 5px;
